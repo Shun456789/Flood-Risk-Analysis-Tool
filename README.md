@@ -1,15 +1,14 @@
 # Flood Risk Analysis Tool
-
-img
-<br><center>*An image description*</center>
+This tool is a Python-based application designed to assess flood risk by analyzing flood inundation,
+flow velocity, and land use data for Baden-Württemberg. It provides insights into potential flood damage and
+generates a tif file that can easily be viewed in QGIS, a PDF report for easy sharing, and statistics.
 
 ## Code Description
 Purpose, Motivation, Goals
 
 ## Usage (run) instructions
-split into sections:
-To run this tool, sample data is provided within the /data/ folder. You will find a inundation depth GeoTIFF,
-flow velocity GeoTIFF that can be selected with the tool. If you wish to generate your own inundation depth GeoTIFF,
+To run this tool, sample data is provided within the /data/ folder. You will find an inundation GeoTIFF and
+flow velocity GeoTIFF that can be used with the tool. If you wish to generate your own inundation depth GeoTIFF,
 the following section provides information on how to do so:
 
 The first step is open the provided UF_HQ10, UF_HQ100, or UF_HQextreme(?) shapefiles in QGIS. These are provided by
@@ -24,7 +23,6 @@ the temporary scratch layer, ensure that it uses a polygon geometry type and is 
 to be entered. After drawing the polygon shape, be sure to save layer edits and toggle editing off. You should now have something like this:
 
 ![img_1.png](data/Project_Files/img_1.png)
-opacity reduced for visual clarity
 
 Now, in the processing tool box, search clip vector by mask. Set the input layer as the UF_HQ100, and the mask layer as the
 temporary scratch layer. Both should be on the same CRS. Click "Run" and a new, clipped vector layer will appear.
@@ -35,6 +33,7 @@ The next step is to export the clipped layer, so that we can reproject the data 
 clipped layer that we just made, and select Export > Save Features As. Name the file and layer as you'd like, but be sure to
 set the CRS to EPSG 3857. This is done to easily vectorize the raster. After exporting the layer, it will open automatically
 in your layers and it will be overlaid on top of your previous layer.
+
 ![img_3.png](data/Project_Files/img_3.png)
 
 Finally, we need to turn the reprojected vector drawing into a raster, so that it can be used by the flood risk analysis tool. To
@@ -78,7 +77,7 @@ Results will be outputted to the directory which you selected. You will find the
 - risk_output.tif
 - output.pdf
 
-## Requirements (incl all non-standard python libraries)
+## Requirements
 These are the required packages to run the tool.
 The following list was compiled with pipreqs
 
@@ -92,6 +91,6 @@ The following list was compiled with pipreqs
 - reportlab~=4.2.5
 
 ## Code diagram (ie. UML)
-
+![Code diagram](data/Project_Files/UML.png)
 
 ## Docs of all functions incl. custom classes
