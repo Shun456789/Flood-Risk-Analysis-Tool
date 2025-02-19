@@ -17,25 +17,25 @@ https://udo.lubw.baden-wuerttemberg.de/public/ from Water -> Flood -> Floodplain
 map in QGIS and optionally loading a basemap, navigate to your area of flood risk analysis. In this example, we will
 use Tubingen as our area of study, with the UF_HQ100 shapefile loaded. (corresponding to a 100-year return period flood).
 
-![img.png](img.png)
+![img.png](data/Project_Files/img.png)
 
 Next, we want to create a new temporary scratch layer and draw a polygon around the area which we want to study. While creating
 the temporary scratch layer, ensure that it uses a polygon geometry type and is set to a CRS of EPSG:25832 (the same CRS as the UF_HQ100). No field data needs
 to be entered. After drawing the polygon shape, be sure to save layer edits and toggle editing off. You should now have something like this:
 
-![img_1.png](img_1.png)
+![img_1.png](data/Project_Files/img_1.png)
 opacity reduced for visual clarity
 
 Now, in the processing tool box, search clip vector by mask. Set the input layer as the UF_HQ100, and the mask layer as the
 temporary scratch layer. Both should be on the same CRS. Click "Run" and a new, clipped vector layer will appear.
 
-![img_2.png](img_2.png)
+![img_2.png](data/Project_Files/img_2.png)
 
 The next step is to export the clipped layer, so that we can reproject the data to EPSG 3857. To do this, right click on the
 clipped layer that we just made, and select Export > Save Features As. Name the file and layer as you'd like, but be sure to
 set the CRS to EPSG 3857. This is done to easily vectorize the raster. After exporting the layer, it will open automatically
 in your layers and it will be overlaid on top of your previous layer.
-![img_3.png](img_3.png)
+![img_3.png](data/Project_Files/img_3.png)
 
 Finally, we need to turn the reprojected vector drawing into a raster, so that it can be used by the flood risk analysis tool. To
 do so, open the Raster tab in the top row and select Conversion > Rasterize (Vector to Raster). In the dialog box, select
@@ -43,7 +43,7 @@ the clipped layer as the input layer. Under "A fixed value to burn" enter 1. The
 and for the x- and y-resolution enter anything between 10-20. The higher the value, the coarser the raster will be. To set the
 output extent, click on the dropdown arrow > Calculate from layer > choose the reprojected vector layer that you named
 
-![img_4.png](img_4.png)
+![img_4.png](data/Project_Files/img_4.png)
 
 You will now have a rasterized inundation map for a given return period, for your area of study. You can now export this layer
 by right clicking on it and selecting export. Save the file as you'd like, ensuring that the CRS is EPSG 3857.
@@ -82,14 +82,14 @@ Results will be outputted to the directory which you selected. You will find the
 These are the required packages to run the tool.
 The following list was compiled with pipreqs
 
-contextily==1.6.2
-matplotlib==3.8.4
-numpy~=1.26.4
-pandas==2.2.3
-Pillow~=10.4.0
-rasterio~=1.4.3
-scikit-image~=0.23.2
-reportlab~=4.2.5
+- contextily==1.6.2
+- matplotlib==3.8.4
+- numpy~=1.26.4
+- pandas==2.2.3
+- Pillow~=10.4.0
+- rasterio~=1.4.3
+- scikit-image~=0.23.2
+- reportlab~=4.2.5
 
 ## Code diagram (ie. UML)
 
