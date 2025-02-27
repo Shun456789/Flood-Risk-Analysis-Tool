@@ -5,7 +5,7 @@ import config
 import gui
 import os
 from pdfdocument import PDFDocument
-
+from rasterio.coords import disjoint_bounds
 
 def create_summary_table(risk_data, inundation_data, land_use_data, output_path):
     """
@@ -92,6 +92,13 @@ def main():
     # Resample land-use raster to match inundation raster
     resampled_land_use = inundation_raster.resample_raster(land_use_path)
 
+    # Resample the velocity raster if its provided, also check that velocity and inundation overlap geographically
+    # if they do not, then raise error. A wrong file was uploaded (ie Biberach inundation with Tübingen velocity)
+    if velocity_raster:
+        if disjoint_bounds(velocity_raster.bounds, inundation_raster.bounds):
+            raise ValueError("Velocity raster and inundation raster do not overlap geographically, or there is a coordinate system issue.")
+        velocity_raster_resampled = inundation_raster.resample_raster(velocity_file)
+
     # Update the land_use_raster object with the resampled data
     land_use_raster.data = resampled_land_use
     land_use_raster.transform = inundation_raster.transform
@@ -106,8 +113,8 @@ def main():
     # Handle the optional velocity raster, only if it was inputted
     if velocity_raster:
         velocity_inundation_product = np.where(
-            velocity_raster.data > config.VELOCITY_THRESHOLD,
-            inundation_raster.data * velocity_raster.data,
+            np.array(velocity_raster_resampled.data) > config.VELOCITY_THRESHOLD,
+            inundation_raster.data * velocity_raster_resampled.data,
             inundation_raster.data
         )
     else:
