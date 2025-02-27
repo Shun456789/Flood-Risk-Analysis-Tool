@@ -49,7 +49,7 @@ These are the dependencies required to run the tool. The following list was comp
 The following UML provides a general flowchart of how the tool operates, and how each script plays a role in the tool. Functions are shown as well.
 ![Code diagram](data/Project_Files/UML.png)
 
-## 📄 Function and Class Documentation  
+## Function and Class Documentation  
 For a detailed reference on all functions and custom classes, including their actions, input arguments, and output data types, please visit our documentation page:  
 
 🔗 [View Full Documentation](https://shun456789.github.io/Flood-Risk-Analysis-Tool/function_docs/)
