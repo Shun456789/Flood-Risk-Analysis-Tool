@@ -1,4 +1,3 @@
-## Requirements
 These are the required packages to run the tool.
 The following list was compiled with pipreqs
 
