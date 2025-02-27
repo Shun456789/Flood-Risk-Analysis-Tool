@@ -12,4 +12,4 @@ nav:
   - Code Description: codes.md
   - Code Diagram: diagram.md
   - Usage: usage.md
-  - Docs of all functions incl.custom classes
+  - Docs of all functions incl.custom classes: functions.md
