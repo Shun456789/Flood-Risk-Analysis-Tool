@@ -71,5 +71,5 @@ LAND_USE_MAP = {
     # No Data
     48: 0    # NODATA
 }
-LAND_USE_PATH = "data/U2018_CLC2018_V2020_20u1.tif"
+LAND_USE_PATH = "data/Project_Files/U2018_CLC2018_V2020_20u1.tif"
 VELOCITY_THRESHOLD = 1
