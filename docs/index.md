@@ -15,3 +15,9 @@ generates a tif file that can easily be viewed in QGIS, a PDF report for easy sh
 ## Get Started
 Check out the [Getting Started](usage.md) (to Usage)guide to begin!
 
+## 🚀 Get the Source Code
+
+The Flood Risk Analysis Tool is open-source and available on GitHub.  
+Check out the repository to explore the code, contribute, or report issues.
+
+👉 [View on GitHub](https://github.com/Shun456789/Flood-Risk-Analysis-Tool)
