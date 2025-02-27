@@ -5,6 +5,8 @@ import numpy as np
 class Raster:
     """
     A class for handling raster datasets (loading, resampling, and saving)
+
+    Author: Hunter Moe
     """
     def __init__(self, file_path=None):
         """
