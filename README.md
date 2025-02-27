@@ -4,7 +4,7 @@ flow velocity, and land use data for Baden-Württemberg. It provides insights in
 generates a tif file that can easily be viewed in QGIS, a PDF report for easy sharing, and statistics.
 
 ## Motivation
-With global warming leading to increased precipitation, many municipalities—especially those with water courses—are at risk of flooding. If municipalities are not prepared to handle flooding, they can lead to significant damages. This tool is designed to help municipalities determine flood risk, so that they can prepare solutions before problems arise.
+With global warming leading to increased precipitation, many municipalities—especially those with water courses—will be at an increased risk of flooding. If municipalities are not prepared to handle flooding, they can lead to significant damages. This tool is designed to help municipalities determine flood risk, so that they can prepare solutions before problems arise.
 
 ## Goals
 The goals of this tool are to process inundation, flow velocity and land use into a single flood risk raster, providing a
