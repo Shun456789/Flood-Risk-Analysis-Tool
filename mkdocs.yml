@@ -12,4 +12,4 @@ nav:
   - Inundation Rasters: usage.md
   - Code Diagram: diagram.md
   - Requirements: requirements.md
-  - Docs of all functions incl.custom classes: functions.md
+  - Function and Class Documentation: functions_docs.md
