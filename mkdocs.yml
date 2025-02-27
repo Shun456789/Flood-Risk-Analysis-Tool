@@ -4,13 +4,13 @@ theme:
   name: material
   palette: 
     scheme: default
-    primary: blues
+    primary: blue
     accent: light-blue
 nav:
   - Home: index.md
-  - Getting Started: getting_started.md
-  - Features: features.md
-  - Installation: installation.md
+  - Requirements: requirements.md
+  - Code Description: codes.md
+  - Code Diagram: diagram.md
   - Usage: usage.md
   - API Reference: api_reference.md
   - Contributing: contributing.md
