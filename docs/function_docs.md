@@ -1,6 +1,6 @@
 # Documentation of Functions and Custom Classes
 
-This document provides an overview of all functions and custom classes in the Flood Risk Analysis Tool, including their actions, input arguments, and output data types.
+This page provides an overview of all functions and custom classes in the Flood Risk Analysis Tool, including their actions, input arguments, and output data types.
 
 ## 1. `main.py`
 
