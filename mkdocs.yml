@@ -8,8 +8,8 @@ theme:
     accent: light-blue
 nav:
   - Home: index.md
-  - Requirements: requirements.md
   - Code Description: codes.md
-  - Code Diagram: diagram.md
   - Usage: usage.md
+  - Code Diagram: diagram.md
+  - Requirements: requirements.md
   - Docs of all functions incl.custom classes: functions.md
