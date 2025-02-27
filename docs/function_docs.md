@@ -1,6 +1,6 @@
 # Documentation of Functions and Custom Classes
 
-This page provides an overview of all functions and custom classes in the Flood Risk Analysis Tool, including their actions, input arguments, and output data types.
+This page provides an overview of all functions and custom classes in the tool, discussing their actions, input arguments, and output data types.
 
 ## 1. `main.py`
 
@@ -19,7 +19,7 @@ Generates a statistical summary table based on risk, inundation, and land use da
 ---
 
 ### **`calculate_risk_by_land_use(risk_data, land_use_data, no_data_value, output_path)`**
-Computes total, average, and count of risk values for each land use category and saves the result as a CSV file.
+Calculates total, average, and count of risk values for each land use category and saves the outcome as a CSV file.
 
 #### **Input Arguments**
 - `risk_data` (`np.ndarray`): Flood risk raster data.
@@ -39,27 +39,27 @@ Executes the flood risk analysis workflow by collecting user inputs, processing 
 - None (User inputs are collected via GUI).
 
 #### **Output**
-- None (Generates multiple output files: GeoTIFF, CSV, and optional PDF).
+- None (Generates output files: GeoTIFF, CSV, and optional PDF).
 
 ---
 
 ## 2. `gui.py`
 
 ### **`launch_gui()`**
-Launches a graphical user interface (GUI) for collecting user inputs and returns a dictionary of user-defined parameters.
+Launches a GUI to collect user inputs and returns a dictionary of parameters defined by users.
 
 #### **Input Arguments**
 - None.
 
 #### **Output**
-- `dict`: A dictionary containing user-defined parameters such as return period, file paths, and output settings.
+- `dict`: A dictionary holding user-defined parameters such as return period, file paths, and output settings.
 
 ---
 
 ## 3. `raster.py`
 
 ### **`Raster` Class**
-A class for handling raster datasets, including loading, resampling, and saving.
+A class for handling raster datasets, as well as loading, resampling, and saving.
 
 #### **Methods**
 
@@ -86,14 +86,14 @@ Saves a raster to a new file.
 ## 4. `pdfdocument.py`
 
 ### **`PDFDocument` Class**
-A class for generating PDF reports with flood risk maps and textual descriptions.
+A class for generating PDF reports with flood risk maps and descriptions.
 
 #### **Methods**
 
 #### **`__init__(self, file_path, title="Document", author="Author")`**
 Initializes a `PDFDocument` object.
 
-- `file_path` (`str`): Output file path for the generated PDF.
+- `file_path` (`str`): Output file path for the created PDF.
 - `title` (`str`): Title of the document.
 - `author` (`str`): Author of the document.
 
