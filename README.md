@@ -20,7 +20,7 @@ The following steps should be followed to run the tool:
 6. *Input the sample data into the GUI
 7. Click "Run Script"
 
-* - Sample data is included in the /data/ folder for two different cities in Baden-Württemberg: Biberach and Tübingen. Click the "Browse.." button in the GUI, and then navigate to the /data/ folder. Select either the
+*Sample data is included in the /data/ folder for two different cities in Baden-Württemberg: Biberach and Tübingen. Click the "Browse.." button in the GUI, and then navigate to the /data/ folder. Select either the
 BiberachInundation or TubingenInundation files under the "Inundation File" field, and optionally add the
 BiberachVelocity or TubingenVelocity files under the "Flow Velocity File" field. A /results/ folder is
 included in the project structure, which can be selected for the "Output Directory" field.
