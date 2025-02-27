@@ -121,5 +121,3 @@ Generates a complete PDF report from a raster.
 - `output_dir` (`str`): Directory for saving output files.
 
 ---
-
-This document provides a structured overview of the functions and classes in the Flood Risk Analysis Tool. Each function's purpose, input arguments, and output types are clearly defined to facilitate usage and development.
