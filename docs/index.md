@@ -13,5 +13,5 @@ generates a tif file that can easily be viewed in QGIS, a PDF report for easy sh
 - Generate reports and statistics
 
 ## Get Started
-Check out the [Getting Started](getting_started.md) guide to begin!
+Check out the [Getting Started](usage.md) guide to begin!
 
