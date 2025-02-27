@@ -11,6 +11,8 @@ import os
 class PDFDocument:
     """
     A class for generating a PDF report with a title, image overlay, and text.
+
+    Author: Shun Shiina
     """
     def __init__(self, file_path, title="Document", author="Author"):
         """
@@ -60,7 +62,7 @@ class PDFDocument:
         # Add the image to the PDF
         img = Image(image_path, width=500, height=400)
         self.elements.append(img)
-        self.elements.append(Spacer(1, 20))
+        self.elements.append(Spacer(1, 6))
 
         # Delay file removal until the PDF is saved
         self.temp_image_path = image_path
@@ -75,12 +77,15 @@ class PDFDocument:
 
     def add_bounds(self, bounds):
         """
-        Adds bounds information as text to the PDF.
+        Adds information as text to the PDF.
         """
         bounds_text = f"Bounds of the image: {bounds}"
+        notice_text = "Darker red indicates a higher flood risk. Lighter red indicates a lower flood risk."
         text = Paragraph(bounds_text, self.styles["BodyText"])
-        self.elements.append(text)
+        text2 = Paragraph(notice_text, self.styles["BodyText"])
+        self.elements.append(text2)
         self.elements.append(Spacer(1, 20))
+        self.elements.append(text)
 
     def generate_from_raster(self, raster_path, output_dir):
         """
