@@ -12,7 +12,4 @@ nav:
   - Code Description: codes.md
   - Code Diagram: diagram.md
   - Usage: usage.md
-  - API Reference: api_reference.md
-  - Contributing: contributing.md
-  - License: license.md
-
+  - Docs of all functions incl.custom classes
