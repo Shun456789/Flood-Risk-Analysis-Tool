@@ -9,7 +9,7 @@ theme:
 nav:
   - Home: index.md
   - Code Description: codes.md
-  - Usage: usage.md
+  - Flood Maps: usage.md
   - Code Diagram: diagram.md
   - Requirements: requirements.md
   - Docs of all functions incl.custom classes: functions.md
