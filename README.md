@@ -25,6 +25,16 @@ BiberachInundation or TubingenInundation files under the "Inundation File" field
 BiberachVelocity or TubingenVelocity files under the "Flow Velocity File" field. A /results/ folder is
 included in the project structure, which can be selected for the "Output Directory" field.
 
+The following table provides more information on each GUI input parameter.
+| GUI Parameter      | Example Value                                          | Notes                                                                                                                                                                                        |
+|--------------------|--------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Return Period      | 100                                                    | Use the return period for the inundation map that you have selected, ie. 10, 100, 1000                                                                                                       |
+| No Data Value      | -999                                                   | Cells that are calculated with no data will appear as black when you export to QGIS, unless a no data value is used. This value helps with clarity of the output file. Any negative integer is suitable |
+| Inundation File    | C:\Users\####\PycharmProjects\FloodRisk\Inundation.tif | The file path to your inundation tif file. Use the file browser to select.                                                                                                                        |
+| Flow Velocity File | C:\Users\####\PycharmProjects\FloodRisk\Velocity.tif   | The file path to your (optional) flow velocity tif file. Use the file browser to select.                                                                                                          |
+| Output Directory   | C:\Users\####\PycharmProjects\FloodRisk\Results        | The directory that results will be stored in, after the tool finishes.                                                                                                                       |
+| Generate PDF       | True/False                                             | An optional feature to generate a PDF output.
+
 Results will be outputted to whichever directory you selected. The following files will be created:
 - risk_output.tif - a GeoTIFF image that can be opened in QGIS to view the flood risk results
 - FloodRiskAnalysis.pdf - a PDF file showcasing the calculated flood risk, overlaid on an OpenStreetMap image
